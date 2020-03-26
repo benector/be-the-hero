@@ -1,0 +1,15 @@
+ENTIDADES DO BD
+
+ONG
+incident
+
+FUNCIONALIDADES
+
+login ongs
+logout ongs
+cadastro de ongs
+cadastro de casos por ongs
+remoçao de casos pela ong
+listagem de casos especificos de uma ong
+listagem todos os casos
+entrar em contato com a ong
