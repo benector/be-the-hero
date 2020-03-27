@@ -1,0 +1,59 @@
+.register-container{
+    width: 100%;
+    max-width: 1120px;
+    height: 100vh;/*ocupa a altura toda do corpo*/
+    margin: 0 auto;/*faça com ue o ocnteudo fique smp centralizado na tela*/
+    display:flex;/*flexbox layout deixa mais fácil fazer alinhamentos */
+    /*itens foram pra dentro do formato flelx e >>==FICAM UM DO LADO DO OUTRO<<==*/
+    /*a menos que mude da direção para flex-direction: column; ai FICAM UM EMBAIXO DO OUTRO*/
+    align-items: center;/*alinhamento vertical*/
+    justify-content: center;/*alinhamento horizontal*/
+}
+
+.register-container .content{
+    width: 100%;
+    max-width: 100%;
+    padding: 96px;
+    background: #f0f0f5;
+    /*distancia do eixo x e do eixo y*//*de blur*/ /*preto com 10% de opacidade*/
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between; /*um item na esquerda outro na direita e um espaço entre eles*/
+    align-items: center;
+
+}
+
+.register-container section{
+    width: 100%;
+    max-width: 380px;
+}
+
+.register-container section h1{
+    margin: 64px 0 32px;
+    font-size: 32px;
+}
+
+.register-container section p{
+    font-size: 18px;
+    color: #737380;
+    line-height: 32px; /*altura da linha/distancia entre linhas*/
+
+}
+
+.register-container .content form{
+    width: 100%;
+    max-width: 450px;
+}
+
+.register-container .content form input{
+    margin-top: 8px;
+}
+
+.register-container .content form .input-group{
+    display: flex;
+}
+
+.register-container .content form .input-group input + input{ /*pegando input que tenha input antes(estilizando todos input a partir do segundo*/
+    margin-left: 8px;
+}

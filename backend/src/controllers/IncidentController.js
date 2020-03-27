@@ -33,7 +33,6 @@ module.exports = {
     async create(request,response){
         const {title, description, value} = request.body;
             //cabeçalho da reuisição, autenticação do usuário, localização, contexto da reuisição
-
         const ong_id = request.headers.authorization;//chave estrangeira
         //o primeiro valor desse array será armazenado na variavel id
         const [id] = await connection('incidents').insert({
@@ -48,16 +47,16 @@ module.exports = {
     },
     //REMOÇÃO DE CASOS
     async delete(request,response){
-        const { id } = request.params;//pega o id do request.params(rota)
-        const ong_id = request.headers.authorization;//chave estrangeira
+        const { id } = request.params;//pega o id do request.params(rota) id do caso quero deletar
+        //const ong_id = request.headers.authorization;//chave estrangeira
+        const ong_id = request.headers.authorization;
         //temos que assegurar uqe a ong requisiçãõ do caso foi
         //a que criou o mesmo:
-        const incident = await connection('incidents')
-        .where('id',id)//id de uem ta fazendo requisição
-        .select('ong_id')//coluna ong_id
-        .first();//temos um unico registro no fim das contas né
-
-        if(incident.ong_id != ong_id ){
+        const incident = await connection('incidents').where('id', id).select('ong_id').first();
+        //id de uem ta fazendo requisição
+        //coluna ong_id
+        //temos um unico registro no fim das contas né
+        if(incident.ong_id !== ong_id ){
             //codigo 401 signfica não autorizado
             return response.status(401).json({error: 'Operation not permitted'});
         }

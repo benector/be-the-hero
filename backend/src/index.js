@@ -3,7 +3,7 @@ const express = require('express');
 /*importando rotas*/
 const routes = require('./routes');
 
-const ccors = require('cors');
+const cors = require('cors');
 
 /*variavel para armazenar a aplicação*/ 
 const app = express();

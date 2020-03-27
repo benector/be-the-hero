@@ -1,0 +1,29 @@
+.logon-container{/*classe da div ne mo*/
+    width: 100%;
+    max-width: 1120px;
+    height: 100vh;/*ocupa a altura toda do corpo*/
+    margin: 0 auto;/*faça com ue o ocnteudo fique smp centralizado na tela*/
+
+    display:flex;/*flexbox layout deixa mais fácil fazer alinhamentos */
+    /*itens foram pra dentro do formato flelx e >>==FICAM UM DO LADO DO OUTRO<<==*/
+    /*a menos que mude da direção para flex-direction: column; ai FICAM UM EMBAIXO DO OUTRO*/
+    align-items: center;/*alinhamento vertical*/
+    justify-content: space-between;/*alinhamento horizontal*/
+}
+
+.logon-container section.form{
+    width: 100%;
+    max-width: 350px;
+    margin-right: 30px;
+
+}
+
+/*ESTILIZANDO FORMULÁRIO*/
+.logon-container section.form form{
+    margin-top: 100px;
+}
+.logon-container section.form h1{
+    font-size:32px;
+    margin-bottom: 32px;
+}
+
