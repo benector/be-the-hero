@@ -1,0 +1,23 @@
+REACT NATIVE
+
+vamos usar div pra tudo pois o ract native não tem as mesmas tags que temos pro html
+
+temos tag view e text
+text é para qualquer tipo de texto sem discriminação
+não temos className ou id, pra botar estilização na 'div' temos u passar a tag style que recebe um objeto com a estiliização
+
+classe stylesheet com o metodo create para criamos o estilo
+
+flexbox: todos os elementos do react nave ja tem display flex por padrão
+
+PROPRIEDADES:
+sem hifen colocamos a proxima letra em maiusculo e o ue não for numero precisa de aspas simples
+
+HERANÇA DE ESTILOS
+não existe isso no react-native >>cada elemento tem estilização própria<< sem herança de hierarquia de tags
+
+NAVEGAÇÃO
+existe por abas, drawer  (da esquerda pra direita ou vice versa), stack navigator uma navegação sem visual, so por botões que é o que vamos usar
+
+FAZER UMA LISTA DE TODOS OS PACOTES IMPORTADOS NESSA APLICAÇÃO TANTO PARA O FRONTEND BACKEND E MOBILE
+
