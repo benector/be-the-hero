@@ -5,6 +5,7 @@ const routes = require('./routes');
 
 const cors = require('cors');
 
+const { errors } = require('celebrate');
 /*variavel para armazenar a aplicação*/ 
 const app = express();
 app.use(cors());//daremos um endereço para acesso da aplicação
@@ -15,14 +16,16 @@ app.use(cors());//daremos um endereço para acesso da aplicação
   json em objeto do javascript (algo entendivel pela aplicação)*/
 app.use(express.json());
 app.use(routes);
-
+app.use(errors());
 
 
 
 
 
 /*mandar a aplicação ouvir a port 3333 (acessa-la por essa porta) */
-app.listen(3333);
+//app.listen(3333);
+
+module.exports = app;
 
  /*CONFIGURAÇÃO BANCO DE DADOS
     3 formas de conexão
